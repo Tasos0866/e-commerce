@@ -4,12 +4,7 @@ import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 import useStyles from './styles';
 
-const products = [
-    { id: 1, name: 'Shoes', description: 'Running shoes.', price: '$5', image: 'https://cdn.shopify.com/s/files/1/1703/6727/products/tropicfeel-web-ecommerce-jungle-chip-grey-01.jpg?v=1628159134' },
-    { id: 2, name: 'Macbook', description: 'Apple macbook.', price: '$10', image: 'https://thumbs.dreamstime.com/b/apple-macbook-pro-retina-open-tab-safari-which-shows-yahoo-web-page-varna-bulgaria-march-directly-front-view-inch-91718330.jpg' }
-]
-
-const Products = () => {
+const Products = ({ products }) => {
     const classes = useStyles();
 
     return (
