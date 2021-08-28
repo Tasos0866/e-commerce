@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Button, Divider } from '@material-ui/core';
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import ReactTooltip from 'react-tooltip';
 
 import Review from './Review';
 
@@ -47,6 +48,7 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
             <Elements stripe={stripePromise}>
                 <ElementsConsumer>{({ elements, stripe }) => (
                     <form onSubmit={(e) => handleSubmit(e, elements, stripe)}>
+                        <p style={{ color: 'blue' }} data-tip="card tip">Tip: Enter 4242424242424242 if you don't want to use your own card</p>
                         <CardElement />
                         <br /> <br />
                         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
