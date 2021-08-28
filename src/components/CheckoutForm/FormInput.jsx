@@ -11,7 +11,7 @@ function FormInput({ name, label, required }) {
                 name={name}
                 control={control}
                 render={({ field }) => (
-                    <TextField
+                    <TextField {...field}
                         fullWidth
                         label={label}
                         required={required}
