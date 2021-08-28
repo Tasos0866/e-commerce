@@ -66,7 +66,7 @@ const App = () => {
     }, []);
 
     return (
-        <Router>
+        <Router basename="/e-commerce">
             <div>
                 <Navbar totalItems={cart.total_items} />
                 <Switch>
